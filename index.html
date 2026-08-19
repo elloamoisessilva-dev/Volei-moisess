@@ -1,0 +1,467 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blog Escola Leão Schulmann</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f8ff;
+    color: #333;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: linear-gradient(135deg, #ff4f9a, #287bff);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* MENU */
+
+nav {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #287bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 18px;
+}
+
+nav a:hover {
+    color: #ff4f9a;
+}
+
+/* IMAGEM DA ESCOLA */
+
+.imagem-escola {
+    width: 100%;
+    max-width: 1100px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* CONTEÚDO */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.titulo {
+    text-align: center;
+    color: #287bff;
+    margin-bottom: 30px;
+}
+
+.titulo h2 {
+    font-size: 32px;
+}
+
+.titulo p {
+    margin-top: 8px;
+    color: #666;
+}
+
+/* NOTÍCIAS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    border-top: 6px solid #ff4f9a;
+    box-shadow: 0 5px 18px rgba(40,123,255,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    color: #287bff;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* BOTÃO LIKE */
+
+.acoes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like-btn {
+    background: white;
+    border: 2px solid #ff4f9a;
+    color: #ff4f9a;
+    padding: 10px 17px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.like-btn:hover {
+    background: #ff4f9a;
+    color: white;
+}
+
+.like-btn.liked {
+    background: #ff4f9a;
+    color: white;
+}
+
+.likes {
+    color: #287bff;
+    font-weight: bold;
+}
+
+/* FERIADOS */
+
+.feriados {
+    margin-top: 50px;
+    background: linear-gradient(135deg, #287bff, #ff4f9a);
+    color: white;
+    padding: 35px;
+    border-radius: 20px;
+}
+
+.feriados h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feriados p {
+    background: rgba(255,255,255,0.15);
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* AVISO */
+
+.aviso {
+    margin-top: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 7px solid #ff4f9a;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.aviso h2 {
+    color: #287bff;
+    margin-bottom: 10px;
+}
+
+/* RODAPÉ */
+
+footer {
+    margin-top: 60px;
+    background: #287bff;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer strong {
+    color: #ffb6d5;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    .imagem-escola {
+        height: 250px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>🏫 BLOG LEÃO SCHULMANN</h1>
+
+    <p>
+        Notícias, eventos, avisos e novidades da nossa escola
+    </p>
+
+</header>
+
+
+<nav>
+
+    <a href="#inicio">Início</a>
+
+    <a href="#noticias">Notícias</a>
+
+    <a href="#feriados">Feriados</a>
+
+    <a href="#avisos">Avisos</a>
+
+</nav>
+
+
+<main class="container" id="inicio">
+
+
+<!-- FOTO DA ESCOLA -->
+
+
+>
+
+
+<div class="titulo" id="noticias">
+
+    <h2>📚 Notícias da Escola</h2>
+
+    <p>
+        Fique por dentro de tudo o que acontece na Escola Leão Schulmann!
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+    <h3>🎓 Vida Escolar</h3>
+
+    <p>
+        A Escola Leão Schulmann busca oferecer um ambiente
+        acolhedor, seguro e preparado para o aprendizado
+        dos alunos.
+    </p>
+
+    <div class="acoes">
+
+        <button class="like-btn" onclick="curtir(this)">
+            ❤️ Curtir
+        </button>
+
+        <span class="likes">
+            <span>0</span> curtidas
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+    <h3>🎉 Eventos Escolares</h3>
+
+    <p>
+        A escola realiza eventos, atividades culturais,
+        comemorações e projetos que envolvem toda
+        a comunidade escolar.
+    </p>
+
+    <div class="acoes">
+
+        <button class="like-btn" onclick="curtir(this)">
+            ❤️ Curtir
+        </button>
+
+        <span class="likes">
+            <span>0</span> curtidas
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+    <h3>📖 Aprendizado</h3>
+
+    <p>
+        Os alunos participam de atividades que ajudam
+        no desenvolvimento, na criatividade e na construção
+        do conhecimento.
+    </p>
+
+    <div class="acoes">
+
+        <button class="like-btn" onclick="curtir(this)">
+            ❤️ Curtir
+        </button>
+
+        <span class="likes">
+            <span>0</span> curtidas
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- FERIADOS -->
+
+<section class="feriados" id="feriados">
+
+    <h2>📅 Datas de Feriados Escolares</h2>
+
+    <p>1º de janeiro — Confraternização Universal</p>
+
+    <p>Dias de Carnaval — 13 a 17 de fevereiro</p>
+
+    <p>Sexta-Feira Santa — 3 de abril</p>
+
+    <p>Tiradentes — 21 de abril</p>
+
+    <p>Dia do Trabalho — 1º de maio</p>
+
+    <p>Corpus Christi — 4 de junho</p>
+
+    <p>Proclamação da República — 15 de novembro</p>
+
+</section>
+
+
+<!-- AVISOS -->
+
+<section class="aviso" id="avisos">
+
+    <h2>📢 Avisos</h2>
+
+    <p>
+        Acompanhe o blog para receber novidades sobre
+        provas, trabalhos, eventos, reuniões e atividades
+        da Escola Leão Schulmann.
+    </p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 <strong>Blog Escola Leão Schulmann</strong>
+    </p>
+
+    <p>
+        Feito com 💗💙 para a comunidade escolar.
+    </p>
+
+</footer>
+
+
+<script>
+
+function curtir(botao) {
+
+    let contador = botao.parentElement
+        .querySelector(".likes span");
+
+    let numero = parseInt(contador.textContent);
+
+    if (botao.classList.contains("liked")) {
+
+        numero--;
+
+        botao.classList.remove("liked");
+
+        botao.innerHTML = "❤️ Curtir";
+
+    } else {
+
+        numero++;
+
+        botao.classList.add("liked");
+
+        botao.innerHTML = "💖 Curtido";
+
+    }
+
+    contador.textContent = numero;
+}
+
+</script>
+
+
+</body>
+</html>
+
